@@ -1,0 +1,70 @@
+@keyframes bat {
+  0%{
+    top: 10px;
+  } 
+  50%{
+    transform: rotate(-60deg);
+    transform-origin: top right;
+  } 
+  70%{
+    transform: rotate(-120deg);
+    transform-origin: top right;
+
+  }
+  100%{
+    transform: rotate(-120deg);
+    transform-origin: top right;
+  }
+}
+@keyframes ball{
+    0%{
+        transform: translate(900px, 50px);
+
+    }
+    25%{
+        transform: translate(280px, 150px) rotate(-2060deg);
+        transform-origin: center;
+         /* transition: transform 0.7s linear; */
+    }
+    50%{
+        transform: translate(80px, 50px) rotate(-2060deg);
+        transform-origin: center;
+         /* transition: transform 0.3s linear; */
+    }
+    100%{
+        transform: translate(1100px, -150px) rotate(-2060deg);
+        transform-origin: center;
+         /* transition: transform 0.3s linear; */
+    }
+
+    
+}
+.field{
+    margin-top: 0px;
+    height: 500px;
+}
+.bat{
+    position: relative;
+    top: 10px;
+    height: 300px;
+    z-index: 1;
+}
+.ball{
+    width: 70px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+.field:hover .bat{
+    animation: bat 1s ease-in 2s infinite;
+}
+.field:hover .ball{
+    
+    animation: ball 1s linear 2s infinite;
+}
+.ground{
+    position: relative;
+    top: -250px;
+    z-index: 0;
+    transform: scale(140%);
+}
